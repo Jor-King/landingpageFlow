@@ -1,0 +1,6 @@
+{
+  "name": "Flow - Plataforma de Contenido y Aprobaciones",
+  "description": "Plataforma premium SaaS Flow para agencias de marketing: planifica parrillas, previsualiza y aprueba contenido en 1 clic.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
