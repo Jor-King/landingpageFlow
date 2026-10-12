@@ -34,7 +34,7 @@ export const AuthModal: React.FC<AuthModalProps> = ({
   return (
     <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-neutral-900/40 backdrop-blur-sm animate-in fade-in duration-200">
       <div className="relative w-full max-w-md rounded-2xl border border-neutral-200 bg-white p-6 md:p-8 shadow-2xl overflow-hidden">
-        <BorderBeam size={220} duration={10} colorFrom="#2563eb" colorTo="#06b6d4" />
+        <BorderBeam size={220} duration={10} colorFrom="#00C4FF" colorTo="#EC4899" />
 
         <button
           onClick={onClose}
@@ -56,7 +56,7 @@ export const AuthModal: React.FC<AuthModalProps> = ({
         ) : (
           <div className="space-y-6">
             <div className="text-center space-y-2">
-              <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-blue-50 border border-blue-200 text-blue-700 text-xs font-medium">
+              <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-violet-50 border border-violet-200 text-violet-700 text-xs font-medium">
                 <Sparkles className="w-3.5 h-3.5" /> Acceso a tu Cuenta
               </div>
               <h3 className="text-2xl font-bold text-neutral-900 font-heading">
@@ -77,7 +77,7 @@ export const AuthModal: React.FC<AuthModalProps> = ({
                   setSubmitted(true);
                   setTimeout(() => { setSubmitted(false); onClose(); }, 1500);
                 }}
-                className="w-full flex items-center justify-center gap-2.5 py-2.5 px-4 rounded-xl border border-neutral-200 bg-white hover:bg-neutral-50 text-xs text-neutral-700 font-medium transition-colors shadow-xs"
+                className="w-full flex items-center justify-center gap-2.5 py-2.5 px-4 rounded-xl border border-neutral-200 bg-white hover:bg-neutral-50 text-xs text-neutral-700 font-medium transition-colors shadow-xs cursor-pointer"
               >
                 <svg className="w-4 h-4 shrink-0" viewBox="0 0 24 24">
                   <path
@@ -113,7 +113,7 @@ export const AuthModal: React.FC<AuthModalProps> = ({
               {mode === "signup" && (
                 <div>
                   <label className="block text-xs font-medium text-neutral-700 mb-1">
-                    Full Name
+                    Nombre Completo
                   </label>
                   <div className="relative">
                     <User className="absolute left-3 top-2.5 w-4 h-4 text-neutral-400" />
@@ -123,7 +123,7 @@ export const AuthModal: React.FC<AuthModalProps> = ({
                       value={name}
                       onChange={(e) => setName(e.target.value)}
                       placeholder="Tu nombre completo"
-                      className="w-full text-xs pl-9 pr-3 py-2.5 rounded-xl bg-neutral-50 border border-neutral-200 text-neutral-900 placeholder:text-neutral-400 focus:outline-none focus:border-blue-500 focus:bg-white transition-colors"
+                      className="w-full text-xs pl-9 pr-3 py-2.5 rounded-xl bg-neutral-50 border border-neutral-200 text-neutral-900 placeholder:text-neutral-400 focus:outline-none focus:border-violet-500 focus:bg-white transition-colors"
                     />
                   </div>
                 </div>
@@ -141,7 +141,7 @@ export const AuthModal: React.FC<AuthModalProps> = ({
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     placeholder="agencia@tuempresa.com"
-                    className="w-full text-xs pl-9 pr-3 py-2.5 rounded-xl bg-neutral-50 border border-neutral-200 text-neutral-900 placeholder:text-neutral-400 focus:outline-none focus:border-blue-500 focus:bg-white transition-colors"
+                    className="w-full text-xs pl-9 pr-3 py-2.5 rounded-xl bg-neutral-50 border border-neutral-200 text-neutral-900 placeholder:text-neutral-400 focus:outline-none focus:border-violet-500 focus:bg-white transition-colors"
                   />
                 </div>
               </div>
@@ -156,16 +156,16 @@ export const AuthModal: React.FC<AuthModalProps> = ({
                     type="password"
                     required
                     placeholder="••••••••••••"
-                    className="w-full text-xs pl-9 pr-3 py-2.5 rounded-xl bg-neutral-50 border border-neutral-200 text-neutral-900 placeholder:text-neutral-400 focus:outline-none focus:border-blue-500 focus:bg-white transition-colors"
+                    className="w-full text-xs pl-9 pr-3 py-2.5 rounded-xl bg-neutral-50 border border-neutral-200 text-neutral-900 placeholder:text-neutral-400 focus:outline-none focus:border-violet-500 focus:bg-white transition-colors"
                   />
                 </div>
               </div>
 
               <button
                 type="submit"
-                className="w-full py-3 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-medium text-xs flex items-center justify-center gap-1.5 shadow-md shadow-blue-600/20 transition-all cursor-pointer"
+                className="w-full py-3 rounded-xl bg-gradient-to-r from-[#00C4FF] via-[#7C3AED] to-[#EC4899] hover:opacity-95 text-white font-bold text-xs flex items-center justify-center gap-1.5 shadow-md shadow-[#7C3AED]/25 transition-all cursor-pointer"
               >
-                <span>{mode === "signup" ? "Crear Cuenta de Agencia" : "Iniciar Sesión"}</span>
+                <span>{mode === "signup" ? "Crear Cuenta Gratis" : "Iniciar Sesión"}</span>
                 <ArrowRight className="w-4 h-4" />
               </button>
             </form>
@@ -173,11 +173,11 @@ export const AuthModal: React.FC<AuthModalProps> = ({
             <div className="text-center text-xs text-neutral-500">
               {mode === "signup" ? (
                 <>
-                  ¿Ya tienes cuenta de agencia?{" "}
+                  ¿Ya tienes una cuenta?{" "}
                   <button
                     type="button"
                     onClick={() => setMode("login")}
-                    className="text-blue-600 hover:underline font-medium"
+                    className="text-[#7C3AED] hover:underline font-semibold cursor-pointer"
                   >
                     Iniciar sesión
                   </button>
@@ -188,9 +188,9 @@ export const AuthModal: React.FC<AuthModalProps> = ({
                   <button
                     type="button"
                     onClick={() => setMode("signup")}
-                    className="text-blue-600 hover:underline font-medium"
+                    className="text-[#7C3AED] hover:underline font-semibold cursor-pointer"
                   >
-                    Pruébalo gratis
+                    Crear cuenta
                   </button>
                 </>
               )}

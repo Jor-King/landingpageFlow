@@ -3,24 +3,9 @@ import { cn } from "@/lib/utils";
 import { ZapIcon } from "lucide-react";
 import MaxWidthWrapper from "../global/MaxWidthWrapper";
 import AnimationContainer from "../global/AnimationContainer";
+import { BeSelloLogo, BeSelloIcon } from "../ui/BeSelloLogo";
 
-export const FlowLogo = ({ className }: { className?: string }) => (
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    viewBox="0 0 24 24"
-    fill="currentColor"
-    className={cn("w-6 h-6", className)}
-  >
-    <path
-      d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      fill="none"
-    />
-  </svg>
-);
+export { BeSelloLogo, BeSelloIcon };
 
 export const Navbar = ({ onOpenAuth }: { onOpenAuth?: () => void }) => {
   const [scroll, setScroll] = useState(false);
@@ -52,13 +37,8 @@ export const Navbar = ({ onOpenAuth }: { onOpenAuth?: () => void }) => {
       <AnimationContainer reverse delay={0.1} className="size-full">
         <MaxWidthWrapper className="flex items-center justify-between h-full">
           {/* Brand Logo */}
-          <a href="#home" className="flex items-center gap-x-2.5 group">
-            <div className="h-8 w-8 rounded-xl bg-blue-600 flex items-center justify-center text-white shadow-sm transition-transform group-hover:scale-105">
-              <FlowLogo className="w-4 h-4 text-white" />
-            </div>
-            <span className="text-xl font-bold text-neutral-900 tracking-tight font-heading">
-              Flow
-            </span>
+          <a href="#home" className="flex items-center gap-x-2 group">
+            <BeSelloLogo size="md" />
           </a>
 
           {/* Clean Action Buttons: Iniciar Sesión & Get Started */}
@@ -71,10 +51,10 @@ export const Navbar = ({ onOpenAuth }: { onOpenAuth?: () => void }) => {
             </button>
             <button
               onClick={onOpenAuth}
-              className="flex items-center gap-1.5 px-3.5 sm:px-4 py-2 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-semibold text-xs sm:text-sm shadow-md shadow-blue-600/20 hover:scale-[1.02] active:scale-95 transition-all cursor-pointer"
+              className="flex items-center gap-1.5 px-3.5 sm:px-4 py-2 rounded-xl bg-gradient-to-r from-[#00C4FF] via-[#7C3AED] to-[#EC4899] hover:opacity-95 text-white font-bold text-xs sm:text-sm shadow-md shadow-[#7C3AED]/25 hover:scale-[1.02] active:scale-95 transition-all cursor-pointer"
             >
-              <span>Get Started</span>
-              <ZapIcon className="size-3.5 text-blue-200 fill-blue-200" />
+              <span>Empezar gratis</span>
+              <ZapIcon className="size-3.5 text-white fill-white" />
             </button>
           </div>
         </MaxWidthWrapper>

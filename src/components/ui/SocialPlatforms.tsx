@@ -199,7 +199,7 @@ export const SocialPlatforms: React.FC = () => {
                 className={cn(
                   "flex items-center gap-3 px-5 py-3 rounded-2xl border transition-all duration-200 select-none shrink-0 group pointer-events-auto",
                   isSelected
-                    ? "border-blue-600 bg-blue-50/50 shadow-md ring-2 ring-blue-500/20 text-neutral-900"
+                    ? "border-violet-600 bg-violet-50/50 shadow-md ring-2 ring-violet-500/20 text-neutral-900"
                     : "border-neutral-200/90 bg-white/85 text-neutral-500 hover:text-neutral-900 hover:border-neutral-300 hover:bg-white shadow-[0_2px_8px_rgba(0,0,0,0.02)] hover:shadow-md"
                 )}
               >
@@ -207,7 +207,7 @@ export const SocialPlatforms: React.FC = () => {
                   className={cn(
                     "w-6 h-6 flex items-center justify-center shrink-0 transition-colors",
                     isSelected
-                      ? "text-blue-600"
+                      ? "text-violet-600"
                       : "text-neutral-400 group-hover:text-neutral-900"
                   )}
                 >

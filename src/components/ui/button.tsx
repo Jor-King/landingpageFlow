@@ -4,14 +4,15 @@ import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "@/lib/utils";
 
 const buttonVariants = cva(
-  "inline-flex items-center justify-center whitespace-nowrap rounded-lg text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 active:scale-95 transition-all cursor-pointer",
+  "inline-flex items-center justify-center whitespace-nowrap rounded-lg text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 active:scale-95 transition-all cursor-pointer",
   {
     variants: {
       variant: {
         default: "bg-neutral-900 text-white hover:bg-neutral-800 shadow-sm",
-        primary: "bg-blue-600 text-white hover:bg-blue-700 shadow-[0_4px_14px_rgba(37,99,235,0.25)]",
-        blue: "bg-blue-600 text-white hover:bg-blue-700 shadow-[0_4px_14px_rgba(37,99,235,0.25)]",
-        purple: "bg-blue-600 text-white hover:bg-blue-700 shadow-[0_4px_14px_rgba(37,99,235,0.25)]",
+        primary: "bg-violet-600 text-white hover:bg-violet-700 shadow-[0_4px_14px_rgba(124,58,237,0.25)]",
+        blue: "bg-violet-600 text-white hover:bg-violet-700 shadow-[0_4px_14px_rgba(124,58,237,0.25)]",
+        purple: "bg-violet-600 text-white hover:bg-violet-700 shadow-[0_4px_14px_rgba(124,58,237,0.25)]",
+        violet: "bg-violet-600 text-white hover:bg-violet-700 shadow-[0_4px_14px_rgba(124,58,237,0.25)]",
         ghost: "hover:bg-neutral-100 text-neutral-700 hover:text-neutral-950",
         subtle: "bg-neutral-100 text-neutral-800 hover:bg-neutral-200",
         outline:

@@ -1,6 +1,6 @@
 import React from "react";
 import AnimationContainer from "../global/AnimationContainer";
-import { FlowLogo } from "./navbar";
+import { BeSelloLogo } from "../ui/BeSelloLogo";
 
 export const Footer = () => {
   return (
@@ -11,23 +11,18 @@ export const Footer = () => {
         {/* Brand Column */}
         <AnimationContainer delay={0.1}>
           <div className="flex flex-col items-start justify-start max-w-sm">
-            <div className="flex items-center gap-2">
-              <div className="h-8 w-8 rounded-xl bg-blue-600 flex items-center justify-center text-white shadow-sm">
-                <FlowLogo className="w-4 h-4 text-white" />
-              </div>
-              <span className="font-heading font-bold text-xl text-neutral-900 tracking-tight">Flow</span>
-            </div>
+            <BeSelloLogo size="md" />
             <p className="text-neutral-500 mt-3.5 text-sm text-start leading-relaxed">
-              El sistema de planeación de contenido y aprobaciones en 1 clic para creadores, freelancers, equipos internos y agencias.
+              Tu contenido, con sello de aprobación. Aprobaciones en 1 clic sin contraseñas para creadores, freelancers y agencias.
             </p>
             <div className="mt-4 flex items-center gap-2 text-xs text-neutral-500">
               <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
-              <span>Sistemas operativos en línea</span>
+              <span>Sistemas operativos en línea · 99.9% Uptime</span>
             </div>
           </div>
         </AnimationContainer>
 
-        {/* Minimal Navigation Columns (No Integrations, No Resources) */}
+        {/* Minimal Navigation Columns */}
         <div className="flex items-start gap-12 sm:gap-16">
           <AnimationContainer delay={0.2}>
             <div>
@@ -36,22 +31,22 @@ export const Footer = () => {
               </h3>
               <ul className="mt-4 text-sm text-neutral-600 space-y-2.5">
                 <li>
-                  <a href="#preview" className="hover:text-blue-600 transition-colors">
-                    Simulador en Vivo
+                  <a href="#preview" className="hover:text-[#7C3AED] transition-colors">
+                    BeSello Studio en Vivo
                   </a>
                 </li>
                 <li>
-                  <a href="#features" className="hover:text-blue-600 transition-colors">
+                  <a href="#features" className="hover:text-[#7C3AED] transition-colors">
                     Características
                   </a>
                 </li>
                 <li>
-                  <a href="#process" className="hover:text-blue-600 transition-colors">
+                  <a href="#process" className="hover:text-[#7C3AED] transition-colors">
                     Paso a Paso
                   </a>
                 </li>
                 <li>
-                  <a href="#pricing" className="hover:text-blue-600 transition-colors">
+                  <a href="#pricing" className="hover:text-[#7C3AED] transition-colors">
                     Planes y Precios
                   </a>
                 </li>
@@ -66,17 +61,17 @@ export const Footer = () => {
               </h3>
               <ul className="mt-4 text-sm text-neutral-600 space-y-2.5">
                 <li>
-                  <a href="#reviews" className="hover:text-blue-600 transition-colors">
+                  <a href="#reviews" className="hover:text-[#7C3AED] transition-colors">
                     Casos de Éxito
                   </a>
                 </li>
                 <li>
-                  <a href="#faq" className="hover:text-blue-600 transition-colors">
-                    Preguntas Frecuentes
+                  <a href="#pricing" className="hover:text-[#7C3AED] transition-colors">
+                    Garantía & Seguridad
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="hover:text-blue-600 transition-colors">
+                  <a href="#" className="hover:text-[#7C3AED] transition-colors">
                     Términos y Privacidad
                   </a>
                 </li>
@@ -89,12 +84,12 @@ export const Footer = () => {
       <div className="mt-12 border-t border-neutral-200/80 pt-6 flex flex-col sm:flex-row items-center justify-between gap-4 w-full text-xs text-neutral-400">
         <AnimationContainer delay={0.4}>
           <p>
-            &copy; {new Date().getFullYear()} Flow INC. Todos los derechos reservados.
+            &copy; {new Date().getFullYear()} BeSello INC. Todos los derechos reservados.
           </p>
         </AnimationContainer>
         <AnimationContainer delay={0.4}>
           <p className="text-neutral-400 text-xs">
-            Diseñado para simplificar la gestión de contenidos.
+            Tu contenido, con sello de aprobación.
           </p>
         </AnimationContainer>
       </div>

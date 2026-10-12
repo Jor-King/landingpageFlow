@@ -23,9 +23,9 @@ const STEPS: WorkflowStep[] = [
   {
     id: "step-1",
     stepNumber: "01",
-    category: "Parrilla",
+    category: "Calendario",
     title: "Creación de Contenido",
-    description: "Tu equipo redacta los copys y organiza los artes en el calendario mensual de cada cliente.",
+    description: "Tu equipo redacta los textos y organiza el contenido visual en el calendario mensual de cada cliente.",
     meta: "Posts, reels y carruseles",
     icon: CalendarDays,
   },
@@ -35,7 +35,7 @@ const STEPS: WorkflowStep[] = [
     category: "Enlace Mágico",
     title: "Generación del Enlace",
     description: "Se crea un link privado único para el cliente. Acceso directo en 1 clic sin contraseñas.",
-    meta: "flow.io/p/cliente-mayo",
+    meta: "besello.com/p/cliente-mayo",
     icon: Link2,
   },
   {
@@ -52,8 +52,8 @@ const STEPS: WorkflowStep[] = [
     stepNumber: "04",
     category: "Aprobación",
     title: "Aprobación Final",
-    description: "El cliente autoriza la parrilla completa en 1 clic. El calendario queda sellado y listo para ejecutar.",
-    meta: "Parrilla 100% aprobada",
+    description: "El cliente autoriza el calendario completo en 1 clic. El calendario queda sellado y listo para ejecutar.",
+    meta: "Calendario 100% aprobado",
     icon: ShieldCheck,
   },
 ];
@@ -89,7 +89,7 @@ export const AttioWorkflowSection: React.FC = () => {
     return () => observer.disconnect();
   }, []);
 
-  const runStepFlow = (step: number) => {
+  const runStepSequence = (step: number) => {
     if (timeoutRef.current) clearTimeout(timeoutRef.current);
 
     // 1. Current step is processing...
@@ -105,15 +105,15 @@ export const AttioWorkflowSection: React.FC = () => {
           // 4. Bar arrived at next step!
           setTransitioningIndex(null);
           setCurrentStep(step + 1);
-          runStepFlow(step + 1);
+          runStepSequence(step + 1);
         }, CONNECTOR_TIME);
       } else {
-        // All 4 steps completed! Hold in full blue/checked glory, then smoothly repeat
+        // All 4 steps completed! Hold in full checked glory, then smoothly repeat
         timeoutRef.current = setTimeout(() => {
           setCompletedSteps([]);
           setTransitioningIndex(null);
           setCurrentStep(0);
-          runStepFlow(0);
+          runStepSequence(0);
         }, RESTART_PAUSE_TIME);
       }
     }, CARD_ACTIVE_TIME);
@@ -121,7 +121,7 @@ export const AttioWorkflowSection: React.FC = () => {
 
   useEffect(() => {
     if (!hasScrolledIntoView) return; // Wait until user reaches this section!
-    runStepFlow(0);
+    runStepSequence(0);
     return () => {
       if (timeoutRef.current) clearTimeout(timeoutRef.current);
     };
@@ -136,7 +136,7 @@ export const AttioWorkflowSection: React.FC = () => {
     setCompletedSteps(newCompleted);
     setTransitioningIndex(null);
     setCurrentStep(targetIdx);
-    runStepFlow(targetIdx);
+    runStepSequence(targetIdx);
   };
 
   return (
@@ -175,7 +175,7 @@ export const AttioWorkflowSection: React.FC = () => {
                   // Subtle vertical stagger on desktop
                   isEven ? "lg:-translate-y-2" : "lg:translate-y-2",
                   isActive
-                    ? "border-blue-600 shadow-xl shadow-blue-600/15 ring-2 ring-blue-500/25 hover:border-blue-500 hover:shadow-2xl hover:scale-[1.02]"
+                    ? "border-violet-600 shadow-xl shadow-violet-600/15 ring-2 ring-violet-500/25 hover:border-violet-500 hover:shadow-2xl hover:scale-[1.02]"
                     : isCompleted
                     ? "border-emerald-200 bg-white shadow-xs hover:border-emerald-400 hover:shadow-md hover:scale-[1.02]"
                     : "border-neutral-200/80 shadow-2xs opacity-85 hover:opacity-100 hover:border-neutral-400 hover:shadow-md hover:scale-[1.02]"
@@ -189,7 +189,7 @@ export const AttioWorkflowSection: React.FC = () => {
                         className={cn(
                           "px-2 py-0.5 rounded-md text-[10px] font-bold uppercase tracking-wider font-mono transition-colors shrink-0",
                           isActive
-                            ? "bg-blue-600 text-white"
+                            ? "bg-violet-600 text-white"
                             : isCompleted
                             ? "bg-emerald-50 text-emerald-700 border border-emerald-200"
                             : "bg-neutral-100 text-neutral-600"
@@ -210,8 +210,8 @@ export const AttioWorkflowSection: React.FC = () => {
                           Listo
                         </span>
                       ) : isActive ? (
-                        <span className="inline-flex items-center gap-1.5 text-[11px] font-bold text-blue-600 bg-blue-50 border border-blue-200/70 px-2.5 py-0.5 rounded-full whitespace-nowrap shrink-0">
-                          <span className="w-1.5 h-1.5 rounded-full bg-blue-600 animate-ping shrink-0" />
+                        <span className="inline-flex items-center gap-1.5 text-[11px] font-bold text-violet-600 bg-violet-50 border border-violet-200/70 px-2.5 py-0.5 rounded-full whitespace-nowrap shrink-0">
+                          <span className="w-1.5 h-1.5 rounded-full bg-violet-600 animate-ping shrink-0" />
                           Activo
                         </span>
                       ) : (
@@ -229,7 +229,7 @@ export const AttioWorkflowSection: React.FC = () => {
                       className={cn(
                         "w-9 h-9 rounded-xl flex items-center justify-center shrink-0 transition-all border",
                         isActive
-                          ? "bg-blue-600 text-white border-blue-600 shadow-md shadow-blue-600/20"
+                          ? "bg-violet-600 text-white border-violet-600 shadow-md shadow-violet-600/20"
                           : isCompleted
                           ? "bg-emerald-50 text-emerald-600 border-emerald-100"
                           : "bg-neutral-50 text-neutral-400 border-neutral-200/80"
@@ -279,14 +279,14 @@ export const AttioWorkflowSection: React.FC = () => {
                         strokeLinecap="round"
                       />
 
-                      {/* Animated Blue Path: Slow, fluid travel with curved turn to the right */}
+                      {/* Animated Violet Path: Slow, fluid travel with curved turn to the right */}
                       <path
                         d={
                           isEven
                             ? "M 0 10 C 20 10, 20 26, 36 26 L 46 26 C 56 26, 56 26, 64 26"
                             : "M 0 26 C 20 26, 20 10, 36 10 L 46 10 C 56 10, 56 10, 64 10"
                         }
-                        stroke="#2563eb"
+                        stroke="#7c3aed"
                         strokeWidth="3.5"
                         strokeLinecap="round"
                         pathLength="100"
@@ -305,7 +305,7 @@ export const AttioWorkflowSection: React.FC = () => {
                         }}
                         className={cn(
                           (isConnectorFullyDone || isConnectorTransitioning) &&
-                            "drop-shadow-[0_0_8px_rgba(37,99,235,0.7)]"
+                            "drop-shadow-[0_0_8px_rgba(124,58,237,0.7)]"
                         )}
                       />
                     </svg>
@@ -326,10 +326,10 @@ export const AttioWorkflowSection: React.FC = () => {
                         strokeLinecap="round"
                       />
 
-                      {/* Animated Blue Path with jog to the right */}
+                      {/* Animated Violet Path with jog to the right */}
                       <path
                         d="M 22 0 C 22 14, 38 18, 38 24 C 38 30, 22 34, 22 48"
-                        stroke="#2563eb"
+                        stroke="#7c3aed"
                         strokeWidth="3.5"
                         strokeLinecap="round"
                         pathLength="100"
@@ -348,7 +348,7 @@ export const AttioWorkflowSection: React.FC = () => {
                         }}
                         className={cn(
                           (isConnectorFullyDone || isConnectorTransitioning) &&
-                            "drop-shadow-[0_0_8px_rgba(37,99,235,0.7)]"
+                            "drop-shadow-[0_0_8px_rgba(124,58,237,0.7)]"
                         )}
                       />
                     </svg>

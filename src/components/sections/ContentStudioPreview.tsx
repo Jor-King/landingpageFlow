@@ -14,6 +14,7 @@ import {
   AlertCircle,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { BeSelloIcon } from "@/components/ui/BeSelloLogo";
 
 const PHOTO_PRESETS = [
   {
@@ -38,7 +39,7 @@ const PHOTO_PRESETS = [
   },
 ];
 
-const COPY_PRESETS = [
+const TEXT_PRESETS = [
   {
     label: "Lanzamiento 2026",
     text: "Presentamos oficialmente la nueva colección de temporada. Diseñada para inspirar, conectar y transformar tu día a día con piezas atemporales. Descubre el catálogo completo en nuestra web oficial.",
@@ -49,15 +50,15 @@ const COPY_PRESETS = [
   },
   {
     label: "Tip Estratégico",
-    text: "El error más común al gestionar marcas en redes: publicar sin un calendario centralizado. Cuando tu equipo y tus clientes revisan todo en un solo lugar, los tiempos de entrega se reducen a la mitad.",
+    text: "El error más común al gestionar marcas en redes: trabajar sin un calendario centralizado. Cuando tu equipo y tus clientes revisan todo en un solo lugar, los tiempos de entrega se reducen a la mitad.",
   },
 ];
 
 export const ContentStudioPreview: React.FC = () => {
   // State for live editor
-  const [pageName, setPageName] = useState("Velvet Studio");
+  const [pageName, setPageName] = useState("BeSello Studio");
   const [postText, setPostText] = useState(
-    "Descubre nuestra metodología para escalar la visibilidad de tu marca en redes sociales este 2026. Planifica parrillas mensuales, previsualiza en nativo y aprueba con tus clientes en 1 clic."
+    "Descubre nuestra metodología para escalar la visibilidad de tu marca en redes sociales este 2026. Planifica calendarios mensuales, previsualiza en nativo y aprueba con tus clientes en 1 clic."
   );
   const [selectedPhoto, setSelectedPhoto] = useState(PHOTO_PRESETS[0].url);
   const [customPhotoUrl, setCustomPhotoUrl] = useState("");
@@ -87,9 +88,9 @@ export const ContentStudioPreview: React.FC = () => {
   };
 
   const handleReset = () => {
-    setPageName("Velvet Studio");
+    setPageName("BeSello Studio");
     setPostText(
-      "Descubre nuestra metodología para escalar la visibilidad de tu marca en redes sociales este 2026. Planifica parrillas mensuales, previsualiza en nativo y aprueba con tus clientes en 1 clic."
+      "Descubre nuestra metodología para escalar la visibilidad de tu marca en redes sociales este 2026. Planifica calendarios mensuales, previsualiza en nativo y aprueba con tus clientes en 1 clic."
     );
     setSelectedPhoto(PHOTO_PRESETS[0].url);
     setCustomPhotoUrl("");
@@ -109,9 +110,11 @@ export const ContentStudioPreview: React.FC = () => {
             {/* Editor Header */}
             <div className="flex items-center justify-between pb-3 border-b border-neutral-100">
               <div className="flex items-center gap-2">
-                <span className="w-2 h-2 rounded-full bg-blue-600 animate-pulse" />
-                <span className="text-xs font-bold text-neutral-900 font-heading uppercase tracking-wider">
-                  Editor de Publicación
+                <span className="w-2.5 h-2.5 rounded-full bg-violet-600 animate-pulse" />
+                <span className="text-xs font-bold text-neutral-900 font-heading uppercase tracking-wider flex items-center gap-1.5">
+                  <span className="bg-gradient-to-r from-[#00C4FF] via-[#7C3AED] to-[#EC4899] bg-clip-text text-transparent font-extrabold">BeSello Studio</span>
+                  <span className="text-neutral-300">·</span>
+                  <span>Editor en Vivo</span>
                 </span>
               </div>
               <button
@@ -133,16 +136,16 @@ export const ContentStudioPreview: React.FC = () => {
                 type="text"
                 value={pageName}
                 onChange={(e) => setPageName(e.target.value)}
-                placeholder="Escribe el nombre de tu marca o cliente"
-                className="w-full text-xs px-3.5 py-2.5 rounded-xl border border-neutral-200 bg-neutral-50/60 text-neutral-900 focus:outline-none focus:border-blue-500 focus:bg-white transition-colors"
+                placeholder="BeSello Studio"
+                className="w-full text-xs px-3.5 py-2.5 rounded-xl border border-neutral-200 bg-neutral-50/60 text-neutral-900 focus:outline-none focus:border-violet-500 focus:bg-white transition-colors"
               />
             </div>
 
-            {/* Copy / Post Text Body */}
+            {/* Post Text Body */}
             <div className="space-y-2">
               <div className="flex items-center justify-between">
                 <label className="text-xs font-semibold text-neutral-700">
-                  Texto del Post (Copywriting)
+                  Texto de la Publicación
                 </label>
                 <span className="text-[10px] text-neutral-400 font-mono">
                   {postText.length} caracteres
@@ -153,19 +156,19 @@ export const ContentStudioPreview: React.FC = () => {
                 rows={4}
                 value={postText}
                 onChange={(e) => setPostText(e.target.value)}
-                placeholder="Escribe aquí el copy de tu publicación..."
-                className="w-full text-xs p-3.5 rounded-xl border border-neutral-200 bg-neutral-50/60 text-neutral-900 focus:outline-none focus:border-blue-500 focus:bg-white transition-colors resize-none leading-relaxed"
+                placeholder="Escribe aquí el texto de tu publicación..."
+                className="w-full text-xs p-3.5 rounded-xl border border-neutral-200 bg-neutral-50/60 text-neutral-900 focus:outline-none focus:border-violet-500 focus:bg-white transition-colors resize-none leading-relaxed"
               />
 
               {/* Quick Preset Buttons */}
               <div className="flex items-center gap-1.5 flex-wrap pt-1">
                 <span className="text-[10px] text-neutral-400 font-medium">Ejemplos rápidos:</span>
-                {COPY_PRESETS.map((preset) => (
+                {TEXT_PRESETS.map((preset) => (
                   <button
                     key={preset.label}
                     type="button"
                     onClick={() => setPostText(preset.text)}
-                    className="text-[10px] font-medium px-2 py-0.5 rounded-md bg-neutral-100 hover:bg-blue-50 hover:text-blue-600 text-neutral-600 transition-colors cursor-pointer"
+                    className="text-[10px] font-medium px-2 py-0.5 rounded-md bg-neutral-100 hover:bg-violet-50 hover:text-violet-600 text-neutral-600 transition-colors cursor-pointer"
                   >
                     {preset.label}
                   </button>
@@ -177,7 +180,7 @@ export const ContentStudioPreview: React.FC = () => {
             <div className="space-y-2.5 pt-2 border-t border-neutral-100">
               <div className="flex items-center justify-between">
                 <label className="text-xs font-semibold text-neutral-700 flex items-center gap-1.5">
-                  <ImageIcon className="w-3.5 h-3.5 text-blue-600" />
+                  <ImageIcon className="w-3.5 h-3.5 text-violet-600" />
                   <span>Imagen de la Publicación</span>
                 </label>
                 <span className="text-[10px] text-neutral-400">Selecciona o pega una URL</span>
@@ -195,7 +198,7 @@ export const ContentStudioPreview: React.FC = () => {
                       className={cn(
                         "relative aspect-video rounded-xl overflow-hidden border-2 transition-all cursor-pointer group",
                         isSelected
-                          ? "border-blue-600 shadow-md ring-2 ring-blue-500/20 scale-[1.02]"
+                          ? "border-violet-600 shadow-md ring-2 ring-violet-500/20 scale-[1.02]"
                           : "border-neutral-200 opacity-70 hover:opacity-100"
                       )}
                     >
@@ -205,8 +208,8 @@ export const ContentStudioPreview: React.FC = () => {
                         className="w-full h-full object-cover"
                       />
                       {isSelected && (
-                        <div className="absolute inset-0 bg-blue-600/20 flex items-center justify-center">
-                          <div className="w-4 h-4 rounded-full bg-blue-600 flex items-center justify-center text-white">
+                        <div className="absolute inset-0 bg-violet-600/20 flex items-center justify-center">
+                          <div className="w-4 h-4 rounded-full bg-violet-600 flex items-center justify-center text-white">
                             <Check className="w-2.5 h-2.5 stroke-[3]" />
                           </div>
                         </div>
@@ -225,7 +228,7 @@ export const ContentStudioPreview: React.FC = () => {
                     value={customPhotoUrl}
                     onChange={(e) => setCustomPhotoUrl(e.target.value)}
                     placeholder="O pega aquí la URL de tu propia imagen..."
-                    className="w-full text-xs pl-8 pr-3 py-2 rounded-xl border border-neutral-200 bg-neutral-50/60 text-neutral-900 focus:outline-none focus:border-blue-500 focus:bg-white transition-colors"
+                    className="w-full text-xs pl-8 pr-3 py-2 rounded-xl border border-neutral-200 bg-neutral-50/60 text-neutral-900 focus:outline-none focus:border-violet-500 focus:bg-white transition-colors"
                   />
                 </div>
                 <button
@@ -247,18 +250,14 @@ export const ContentStudioPreview: React.FC = () => {
             <div className="p-3.5 pb-2.5 flex items-start justify-between">
               <div className="flex items-center gap-2.5">
                 <div className="relative">
-                  <img
-                    src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=200&auto=format&fit=crop"
-                    alt="Page Avatar"
-                    className="w-10 h-10 rounded-full object-cover border border-neutral-200"
-                  />
+                  <BeSelloIcon className="w-10 h-10 rounded-full" />
                   <div className="absolute bottom-0 right-0 w-3 h-3 rounded-full bg-emerald-500 border-2 border-white" />
                 </div>
 
                 <div className="flex flex-col">
                   <div className="flex items-center gap-1.5">
                     <span className="text-sm font-bold text-neutral-900 hover:underline cursor-pointer leading-tight">
-                      {pageName || "Tu Marca"}
+                      {pageName || "BeSello Studio"}
                     </span>
                     {/* Official Blue Verified Badge SVG */}
                     <svg viewBox="0 0 24 24" className="w-3.5 h-3.5 fill-[#1877F2] shrink-0">
@@ -293,7 +292,7 @@ export const ContentStudioPreview: React.FC = () => {
 
             {/* Post Text Body */}
             <div className="px-3.5 pt-1 pb-3 text-xs md:text-[13px] text-neutral-900 leading-relaxed break-words whitespace-pre-line">
-              {postText || "Escribe el copy de tu publicación en el panel lateral..."}
+              {postText || "Escribe el texto de tu publicación en el panel lateral..."}
             </div>
 
             {/* Post Media (Image) */}
@@ -369,7 +368,7 @@ export const ContentStudioPreview: React.FC = () => {
           <div className="w-full max-w-[540px] rounded-2xl border border-neutral-200/90 bg-white p-4 shadow-lg shadow-neutral-900/5 space-y-3">
             <div className="flex items-center justify-between text-xs">
               <span className="font-semibold text-neutral-900 flex items-center gap-1.5">
-                <span className="w-2 h-2 rounded-full bg-blue-600" />
+                <span className="w-2 h-2 rounded-full bg-violet-600" />
                 Panel de Decisión del Cliente
               </span>
               <span className="text-[11px] text-neutral-400">
@@ -432,7 +431,7 @@ export const ContentStudioPreview: React.FC = () => {
               <div className="p-3 rounded-xl bg-emerald-50 border border-emerald-200 flex items-center justify-between gap-3 animate-in fade-in duration-200">
                 <div className="flex items-center gap-2 text-xs text-emerald-800 font-medium">
                   <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0" />
-                  <span>¡Publicación autorizada! Contenido aprobado y listo para su publicación.</span>
+                  <span>¡Aprobación concedida! Contenido sellado formalmente y listo para publicar.</span>
                 </div>
                 <button
                   type="button"

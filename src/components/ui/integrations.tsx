@@ -2,6 +2,7 @@ import React, { forwardRef, useRef } from "react";
 import { cn } from "@/lib/utils";
 import AnimatedBeam from "@/components/ui/AnimatedBeam";
 import { CalendarDays } from "lucide-react";
+import { BeSelloIcon } from "@/components/ui/BeSelloLogo";
 
 const Circle = forwardRef<
   HTMLDivElement,
@@ -42,18 +43,18 @@ export function Integrations({ className }: { className?: string }) {
       <div className="flex h-full w-full flex-row items-stretch justify-between gap-10">
         {/* Left: Agency Manager */}
         <div className="flex flex-col justify-center">
-          <Circle ref={divAgencyRef} className="h-14 w-14 border-2 border-blue-500 bg-blue-50">
-            <CalendarDays className="w-6 h-6 text-blue-600" />
+          <Circle ref={divAgencyRef} className="h-14 w-14 border-2 border-[#7C3AED] bg-violet-50">
+            <CalendarDays className="w-6 h-6 text-[#7C3AED]" />
           </Circle>
         </div>
 
-        {/* Center: Flow Calendar Hub */}
+        {/* Center: BeSello Calendar Hub */}
         <div className="flex flex-col justify-center">
           <Circle
             ref={divCenterRef}
-            className="h-16 w-16 border-2 border-blue-600 bg-blue-600 text-white shadow-[0_0_30px_rgba(37,99,235,0.35)]"
+            className="h-16 w-16 border-none p-0 overflow-hidden shadow-[0_0_30px_rgba(124,58,237,0.45)]"
           >
-            <span className="text-xl font-bold font-heading">F</span>
+            <BeSelloIcon className="w-full h-full rounded-2xl" />
           </Circle>
         </div>
 
@@ -130,7 +131,7 @@ export function Integrations({ className }: { className?: string }) {
         pathColor="#e5e7eb"
         pathOpacity={0.9}
         gradientStartColor="#E1306C"
-        gradientStopColor="#2563eb"
+        gradientStopColor="#7c3aed"
       />
       <AnimatedBeam
         containerRef={containerRef}
@@ -140,7 +141,7 @@ export function Integrations({ className }: { className?: string }) {
         pathColor="#e5e7eb"
         pathOpacity={0.9}
         gradientStartColor="#000000"
-        gradientStopColor="#2563eb"
+        gradientStopColor="#7c3aed"
       />
       <AnimatedBeam
         containerRef={containerRef}
@@ -150,7 +151,7 @@ export function Integrations({ className }: { className?: string }) {
         pathColor="#e5e7eb"
         pathOpacity={0.9}
         gradientStartColor="#1877F2"
-        gradientStopColor="#2563eb"
+        gradientStopColor="#7c3aed"
       />
       <AnimatedBeam
         containerRef={containerRef}
@@ -160,7 +161,7 @@ export function Integrations({ className }: { className?: string }) {
         pathColor="#e5e7eb"
         pathOpacity={0.9}
         gradientStartColor="#FF0000"
-        gradientStopColor="#2563eb"
+        gradientStopColor="#7c3aed"
       />
       <AnimatedBeam
         containerRef={containerRef}
@@ -170,7 +171,7 @@ export function Integrations({ className }: { className?: string }) {
         pathColor="#e5e7eb"
         pathOpacity={0.9}
         gradientStartColor="#0A66C2"
-        gradientStopColor="#2563eb"
+        gradientStopColor="#7c3aed"
       />
       <AnimatedBeam
         containerRef={containerRef}
@@ -180,7 +181,7 @@ export function Integrations({ className }: { className?: string }) {
         pathColor="#e5e7eb"
         pathOpacity={0.9}
         gradientStartColor="#25D366"
-        gradientStopColor="#2563eb"
+        gradientStopColor="#7c3aed"
       />
       <AnimatedBeam
         containerRef={containerRef}
@@ -189,8 +190,8 @@ export function Integrations({ className }: { className?: string }) {
         duration={3}
         pathColor="#e5e7eb"
         pathOpacity={0.9}
-        gradientStartColor="#2563eb"
-        gradientStopColor="#1d4ed8"
+        gradientStartColor="#7c3aed"
+        gradientStopColor="#6d28d9"
       />
     </div>
   );

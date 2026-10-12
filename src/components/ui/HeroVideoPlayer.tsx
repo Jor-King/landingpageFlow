@@ -112,8 +112,8 @@ export const HeroVideoPlayer: React.FC<HeroVideoPlayerProps> = ({ className }) =
             size={280}
             duration={12}
             delay={9}
-            colorFrom="#2563eb"
-            colorTo="#06b6d4"
+            colorFrom="#00C4FF"
+            colorTo="#EC4899"
           />
 
           <video
@@ -132,7 +132,7 @@ export const HeroVideoPlayer: React.FC<HeroVideoPlayerProps> = ({ className }) =
       {/* Floating Custom "Play" Cursor for Inline Video */}
       {isHoveringInline && !isExpanded && (
         <div
-          className="pointer-events-none fixed z-[999999] -translate-x-1/2 -translate-y-1/2 flex items-center justify-center gap-1.5 px-3.5 py-2 rounded-full bg-blue-600 text-white font-semibold text-xs shadow-2xl shadow-blue-600/50 backdrop-blur-md border border-white/20 select-none animate-in zoom-in-75 duration-100"
+          className="pointer-events-none fixed z-[999999] -translate-x-1/2 -translate-y-1/2 flex items-center justify-center gap-1.5 px-3.5 py-2 rounded-full bg-violet-600 text-white font-semibold text-xs shadow-2xl shadow-violet-600/50 backdrop-blur-md border border-white/20 select-none animate-in zoom-in-75 duration-100"
           style={{
             left: `${inlineCursorPos.x}px`,
             top: `${inlineCursorPos.y}px`,
