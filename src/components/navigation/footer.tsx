@@ -13,7 +13,7 @@ export const Footer = () => {
           <div className="flex flex-col items-start justify-start max-w-sm">
             <BeSelloLogo size="md" />
             <p className="text-neutral-500 mt-3.5 text-sm text-start leading-relaxed">
-              Tu contenido, con sello de aprobación. Aprobaciones en 1 clic sin contraseñas para creadores, freelancers y agencias.
+              Tu contenido, con sello de aprobación formal. Flujos de validación digital sin contraseñas para creadores, freelancers y agencias.
             </p>
             <div className="mt-4 flex items-center gap-2 text-xs text-neutral-500">
               <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />

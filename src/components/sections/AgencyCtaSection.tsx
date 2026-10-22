@@ -10,8 +10,8 @@ const COMPARISON_ROWS = [
     topic: "Aprobaciones",
     contra: "Cadenas dispersas de mensajería y correos sin trazabilidad ni orden formal.",
     contraShort: "Mensajería dispersa sin trazabilidad.",
-    pro: "Portal de revisión centralizado con aprobación en 1 clic sin registro previo.",
-    proShort: "Validación en 1 clic sin contraseñas.",
+    pro: "Portal de revisión centralizado con aprobación formal y digital sin registro previo.",
+    proShort: "Validación formal sin contraseñas.",
   },
   {
     topic: "Previsualización",
@@ -156,8 +156,8 @@ export const AgencyCtaSection: React.FC<AgencyCtaSectionProps> = ({ onOpenAuth }
             {/* Animated Rotating Conic Gradient Beam Border */}
             <span className="absolute inset-[-1000%] animate-[spin_3.5s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#00C4FF_0%,#7C3AED_50%,#EC4899_100%)] opacity-90" />
 
-            {/* Inner Button Body with Radiant Tri-color Gradient & Sweeping Shimmer */}
-            <span className="relative inline-flex items-center justify-center gap-2.5 rounded-2xl bg-gradient-to-r from-[#00C4FF] via-[#7C3AED] to-[#EC4899] bg-[length:200%_auto] px-7 sm:px-9 py-3.5 sm:py-4 text-sm sm:text-base font-bold text-white transition-all duration-300 group-hover:bg-right overflow-hidden">
+            {/* Inner Button Body with Solid Violet & Sweeping Shimmer */}
+            <span className="relative inline-flex items-center justify-center gap-2.5 rounded-2xl bg-[#7C3AED] hover:bg-[#6D28D9] px-7 sm:px-9 py-3.5 sm:py-4 text-sm sm:text-base font-bold text-white transition-all duration-300 overflow-hidden">
               {/* Shimmer Light Bar Sweeping Across */}
               <span className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-1000 bg-gradient-to-r from-transparent via-white/25 to-transparent ease-in-out pointer-events-none" />
 

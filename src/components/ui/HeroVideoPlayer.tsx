@@ -1,7 +1,6 @@
 import React, { useRef, useState, useEffect } from "react";
 import { createPortal } from "react-dom";
 import { cn } from "@/lib/utils";
-import BorderBeam from "./BorderBeam";
 import { Play, X } from "lucide-react";
 
 interface HeroVideoPlayerProps {
@@ -108,14 +107,6 @@ export const HeroVideoPlayer: React.FC<HeroVideoPlayerProps> = ({ className }) =
         )}
       >
         <div className="relative w-full h-full overflow-hidden bg-white">
-          <BorderBeam
-            size={280}
-            duration={12}
-            delay={9}
-            colorFrom="#00C4FF"
-            colorTo="#EC4899"
-          />
-
           <video
             ref={inlineVideoRef}
             src="/assets/dashboard-video.mp4"

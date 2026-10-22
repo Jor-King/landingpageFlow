@@ -1,6 +1,6 @@
 {
   "name": "BeSello - Plataforma de Contenido y Aprobaciones",
-  "description": "Plataforma premium SaaS BeSello para agencias y creadores: planifica calendarios de contenido, previsualiza y aprueba en 1 clic.",
+  "description": "Plataforma premium SaaS BeSello para agencias y creadores: planifica calendarios de contenido, previsualiza y aprueba formalmente con tus clientes.",
   "requestFramePermissions": [],
   "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
 }

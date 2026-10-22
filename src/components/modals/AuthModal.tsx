@@ -163,7 +163,7 @@ export const AuthModal: React.FC<AuthModalProps> = ({
 
               <button
                 type="submit"
-                className="w-full py-3 rounded-xl bg-gradient-to-r from-[#00C4FF] via-[#7C3AED] to-[#EC4899] hover:opacity-95 text-white font-bold text-xs flex items-center justify-center gap-1.5 shadow-md shadow-[#7C3AED]/25 transition-all cursor-pointer"
+                className="w-full py-3 rounded-xl bg-[#7C3AED] hover:bg-[#6D28D9] text-white font-bold text-xs flex items-center justify-center gap-1.5 shadow-md shadow-[#7C3AED]/25 transition-all cursor-pointer"
               >
                 <span>{mode === "signup" ? "Crear Cuenta Gratis" : "Iniciar Sesión"}</span>
                 <ArrowRight className="w-4 h-4" />

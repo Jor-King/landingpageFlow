@@ -51,7 +51,7 @@ export const Navbar = ({ onOpenAuth }: { onOpenAuth?: () => void }) => {
             </button>
             <button
               onClick={onOpenAuth}
-              className="flex items-center gap-1.5 px-3.5 sm:px-4 py-2 rounded-xl bg-gradient-to-r from-[#00C4FF] via-[#7C3AED] to-[#EC4899] hover:opacity-95 text-white font-bold text-xs sm:text-sm shadow-md shadow-[#7C3AED]/25 hover:scale-[1.02] active:scale-95 transition-all cursor-pointer"
+              className="flex items-center gap-1.5 px-3.5 sm:px-4 py-2 rounded-xl bg-[#7C3AED] hover:bg-[#6D28D9] text-white font-bold text-xs sm:text-sm shadow-md shadow-[#7C3AED]/25 hover:scale-[1.02] active:scale-95 transition-all cursor-pointer"
             >
               <span>Empezar gratis</span>
               <ZapIcon className="size-3.5 text-white fill-white" />

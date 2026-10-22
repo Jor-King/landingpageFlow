@@ -1,9 +1,9 @@
 import React from "react";
-import { PLANS, ADDONS, COMPETITOR_COMPARISON } from "@/constants/besello-data";
+import { PLANS, COMPETITOR_COMPARISON } from "@/constants/besello-data";
 import { cn } from "@/lib/utils";
 import { buttonVariants } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
-import { CheckCircle2Icon, Sparkles, Layers, HardDrive, Check, Zap } from "lucide-react";
+import { CheckCircle2Icon, Sparkles, Check, Zap } from "lucide-react";
 
 export const PricingCards = () => {
   return (
@@ -94,7 +94,7 @@ export const PricingCards = () => {
                   className={cn(
                     buttonVariants({
                       className: isRecommended
-                        ? "w-full bg-gradient-to-r from-[#00C4FF] via-[#7C3AED] to-[#EC4899] hover:opacity-95 text-white shadow-md shadow-[#7C3AED]/25 py-2.5 font-bold text-xs"
+                        ? "w-full bg-[#7C3AED] hover:bg-[#6D28D9] text-white shadow-md shadow-[#7C3AED]/25 py-2.5 font-bold text-xs hover:scale-[1.02] active:scale-[0.98] transition-all"
                         : isFree
                         ? "w-full bg-neutral-900 hover:bg-neutral-800 text-white py-2.5 font-semibold text-xs"
                         : "w-full border border-neutral-300 hover:border-neutral-400 text-neutral-800 hover:bg-neutral-50 py-2.5 font-semibold text-xs",
@@ -107,52 +107,6 @@ export const PricingCards = () => {
             </Card>
           );
         })}
-      </div>
-
-      {/* Extras y Condiciones: Crece sin cambiar de plan (Page 8 del PDF) */}
-      <div className="w-full max-w-5xl mx-auto rounded-2xl border border-neutral-200/90 bg-neutral-50/70 p-6 md:p-8">
-        <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 pb-5 border-b border-neutral-200/80">
-          <div>
-            <div className="inline-flex items-center gap-1.5 text-xs font-bold font-mono text-[#7C3AED] uppercase tracking-wider">
-              <Sparkles className="w-3.5 h-3.5" /> Extras y Condiciones
-            </div>
-            <h4 className="text-xl font-bold font-heading text-neutral-900 mt-1">
-              Crece sin cambiar de plan
-            </h4>
-          </div>
-          <span className="text-xs text-neutral-500 max-w-xs text-start sm:text-right">
-            Adapta tu cuenta a tu ritmo con complementos mensuales transparentes.
-          </span>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 pt-5">
-          {ADDONS.map((addon) => (
-            <div
-              key={addon.title}
-              className="rounded-xl border border-neutral-200 bg-white p-4 shadow-2xs space-y-1.5"
-            >
-              <div className="flex items-center justify-between">
-                <span className="font-semibold text-sm text-neutral-900 flex items-center gap-2">
-                  {addon.title === "Marca adicional" ? (
-                    <Layers className="w-4 h-4 text-[#7C3AED]" />
-                  ) : (
-                    <HardDrive className="w-4 h-4 text-[#00C4FF]" />
-                  )}
-                  {addon.title}
-                </span>
-                <span className="text-sm font-bold font-mono text-neutral-950 bg-neutral-100 px-2 py-0.5 rounded-md">
-                  {addon.price}
-                </span>
-              </div>
-              <p className="text-xs text-neutral-600 leading-relaxed">
-                {addon.description}
-              </p>
-              <p className="text-[11px] font-medium text-[#7C3AED]">
-                {addon.extra}
-              </p>
-            </div>
-          ))}
-        </div>
       </div>
 
       {/* Comparativa Competitiva (Page 12 del PDF): Aprobación en todos los planes */}

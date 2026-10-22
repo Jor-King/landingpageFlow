@@ -40,23 +40,6 @@ export default function App() {
         <MaxWidthWrapper id="home">
           <div className="flex flex-col items-center justify-center w-full text-center pt-10 md:pt-16">
             <AnimationContainer className="flex flex-col items-center justify-center w-full text-center">
-              {/* Announcement Badge */}
-              <button
-                onClick={() => setAuthOpen(true)}
-                className="group relative grid overflow-hidden rounded-full px-4 py-1.5 shadow-[0_2px_12px_rgba(0,0,0,0.06)] border border-neutral-200/90 bg-white transition-all duration-200 hover:border-violet-300 hover:shadow-md cursor-pointer"
-              >
-                <span>
-                  <span className="spark mask-gradient absolute inset-0 h-[100%] w-[100%] animate-flip overflow-hidden rounded-full [mask:linear-gradient(white,_transparent_50%)] before:absolute before:aspect-square before:w-[200%] before:rotate-[-90deg] before:animate-rotate before:bg-[conic-gradient(from_0deg,transparent_0_340deg,#7c3aed_360deg)] before:content-[''] before:[inset:0_auto_auto_50%] before:[translate:-50%_-15%]" />
-                </span>
-                <span className="backdrop absolute inset-[1px] rounded-full bg-white transition-colors duration-200 group-hover:bg-violet-50/50" />
-                <span className="h-full w-full blur-md absolute bottom-0 inset-x-0 bg-gradient-to-tr from-violet-500/10" />
-                <span className="z-10 py-0.5 text-xs md:text-sm font-medium text-neutral-800 flex items-center justify-center gap-1.5">
-                  <Sparkles className="w-3.5 h-3.5 text-violet-600" />
-                  Aprobaciones y calendarios de contenido en 1 clic
-                  <ArrowRightIcon className="ml-1 size-3.5 text-violet-600 transition-transform duration-300 ease-in-out group-hover:translate-x-0.5" />
-                </span>
-              </button>
-
               {/* Main Headline */}
               <h1 className="text-neutral-950 text-center py-6 text-4xl font-medium tracking-tight text-balance sm:text-6xl md:text-7xl lg:text-8xl !leading-[1.12] w-full font-heading max-w-5xl mx-auto">
                 Planifica, programa y{" "}
@@ -68,14 +51,14 @@ export default function App() {
 
               {/* Subtitle */}
               <p className="mb-10 text-base md:text-lg text-neutral-600 tracking-normal text-balance max-w-2xl mx-auto leading-relaxed">
-                La plataforma de planeación y aprobación de calendarios diseñada para creadores, freelancers, equipos internos y agencias. Organiza calendarios visuales, previsualiza formatos nativos y aprueba en 1 clic con respaldo formal.
+                La plataforma de planeación y aprobación de calendarios diseñada para creadores, freelancers, equipos internos y agencias. Organiza calendarios visuales, previsualiza formatos nativos y aprueba formalmente con tus clientes mediante enlace privado sin contraseñas.
               </p>
 
               {/* Hero CTA Button */}
               <div className="flex items-center justify-center whitespace-nowrap gap-4 z-50">
                 <Button
                   onClick={() => setAuthOpen(true)}
-                  className="flex items-center bg-gradient-to-r from-[#00C4FF] via-[#7C3AED] to-[#EC4899] hover:opacity-95 text-white px-8 py-3.5 rounded-xl shadow-lg shadow-[#7C3AED]/25 font-bold text-sm cursor-pointer transition-all hover:scale-[1.02] active:scale-95"
+                  className="flex items-center bg-[#7C3AED] hover:bg-[#6D28D9] text-white px-8 py-3.5 rounded-xl shadow-lg shadow-[#7C3AED]/25 font-bold text-sm cursor-pointer transition-all hover:scale-[1.02] active:scale-95"
                 >
                   <Sparkles className="w-4 h-4 mr-2 text-white" />
                   <span>Empezar gratis</span>
@@ -130,7 +113,7 @@ export default function App() {
                 BeSello Studio: Previsualizador y editor de contenido en vivo
               </h2>
               <p className="mt-3 text-base text-neutral-600 max-w-xl leading-relaxed">
-                Escribe el texto de tu publicación, cambia la imagen y comprueba cómo tu cliente puede aprobar o solicitar ajustes en 1 solo clic mediante un enlace privado sin contraseñas.
+                Escribe el texto de tu publicación, cambia la imagen y comprueba cómo tu cliente puede aprobar o solicitar ajustes directamente mediante un enlace privado sin contraseñas.
               </p>
             </div>
           </AnimationContainer>

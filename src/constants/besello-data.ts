@@ -43,7 +43,7 @@ export const PLANS = [
       { text: "Máximo 50 MB por archivo" },
       { text: "Video 720p · Historial 3 meses" },
       { text: "Link de aprobación con marca BeSello" },
-      { text: "10 textos con IA al mes" },
+      { text: "10 publicaciones con IA al mes" },
     ],
     btn: {
       text: "Empezar gratis",
@@ -66,7 +66,7 @@ export const PLANS = [
       { text: "Máximo 250 MB por archivo · 1080p" },
       { text: "Link de aprobación sin marca BeSello" },
       { text: "Comentarios sobre imagen o video" },
-      { text: "100 textos con IA al mes" },
+      { text: "100 publicaciones con IA al mes" },
     ],
     btn: {
       text: "Elegir Solo",
@@ -89,7 +89,7 @@ export const PLANS = [
       { text: "Máximo 1 GB por archivo · 1080p" },
       { text: "Historial de versiones y reportes PDF" },
       { text: "Roles y permisos básicos" },
-      { text: "500 textos con IA al mes" },
+      { text: "500 publicaciones con IA al mes" },
     ],
     btn: {
       text: "Elegir Estudio",
@@ -113,7 +113,7 @@ export const PLANS = [
       { text: "Roles y permisos avanzados" },
       { text: "Portal con tu logo y dominio propio" },
       { text: "Soporte prioritario por WhatsApp" },
-      { text: "2.000 textos con IA al mes" },
+      { text: "2.000 publicaciones con IA al mes" },
     ],
     btn: {
       text: "Elegir Agencia",
@@ -128,7 +128,7 @@ export const ADDONS = [
     title: "Marca adicional",
     price: "$4 /mes",
     description: "Suma un cliente nuevo sin saltar al siguiente plan.",
-    extra: "+500 textos con IA: $3 al mes",
+    extra: "+500 publicaciones con IA: $3 al mes",
   },
   {
     title: "Más almacenamiento",
@@ -151,7 +151,7 @@ export const COMPETITOR_COMPARISON = [
   },
   {
     name: "BeSello",
-    note: "Aprobación en 1 clic con respaldo formal disponible desde el plan Gratis. Administra hasta 3 clientes independientes por solo $12/mes.",
+    note: "Aprobación formal con respaldo digital disponible desde el plan Gratis. Administra hasta 3 clientes independientes por solo $12/mes.",
     isBeSello: true,
   },
 ] as const;

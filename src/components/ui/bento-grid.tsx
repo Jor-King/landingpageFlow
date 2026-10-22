@@ -110,7 +110,7 @@ export const CARDS = [
           </div>
 
           <p className="text-[11px] text-neutral-700 leading-relaxed font-normal">
-            "¿Sabías que el 80% de tus clientes prefieren validar contenido visual antes de publicarlo? Descubre el nuevo método de aprobación formal en 1 clic 🚀"
+            "¿Sabías que el 80% de tus clientes prefieren validar contenido visual antes de publicarlo? Descubre el nuevo método de aprobación digital formal 🚀"
           </p>
 
           <div className="flex items-center justify-between pt-1 border-t border-neutral-100 text-[10px]">
@@ -141,7 +141,7 @@ export const CARDS = [
   },
   {
     Icon: CheckCircle2Icon,
-    name: "Aprobaciones en 1 Clic",
+    name: "Aprobación Formal Digital",
     description: "Tu cliente valida todo el mes mediante un enlace interactivo sin contraseñas con respaldo formal.",
     className: "col-span-3 lg:col-span-1",
     href: "#",
@@ -175,11 +175,11 @@ export const CARDS = [
           </span>
         </div>
 
-        {/* High-Impact 1-Click Authorization Button */}
+        {/* High-Impact Authorization Button */}
         <div className="pt-1">
-          <div className="w-full py-2.5 px-3 rounded-xl bg-gradient-to-r from-emerald-600 to-teal-600 text-white font-bold text-xs flex items-center justify-center gap-2 shadow-md shadow-emerald-600/30">
+          <div className="w-full py-2.5 px-3 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs flex items-center justify-center gap-2 shadow-md shadow-emerald-600/30 transition-colors">
             <CheckCircle2Icon className="w-4 h-4 text-white" />
-            <span>Aprobado en 1 Clic (20/20 Posts)</span>
+            <span>Calendario Aprobado (20/20 Posts)</span>
           </div>
         </div>
 
